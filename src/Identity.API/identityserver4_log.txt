@@ -39,3 +39,409 @@
 2019-07-05 16:00:41.793 -04:00 [INF] AuthenticationScheme: Identity.External signed out.
 2019-07-05 16:00:41.795 -04:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
 2019-07-05 16:00:41.815 -04:00 [INF] {"SubjectId":"d49b8126-8cea-47fb-b9d8-033fa649e3ad","DisplayName":"Alice Smith","Category":"Authentication","Name":"User Logout Success","EventType":"Success","Id":1002,"Message":null,"ActivityId":"0HLO1GDO6R11P:00000005","TimeStamp":"2019-07-05T20:00:41.0000000Z","ProcessId":4396,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"UserLogoutSuccessEvent"}
+2019-07-05 17:37:35.354 -04:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-07-05 17:37:35.403 -04:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-07-05 17:37:35.408 -04:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-07-05 17:37:35.411 -04:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-07-05 17:37:35.411 -04:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-07-05 17:37:35.412 -04:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-07-05 17:37:35.413 -04:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-07-05 17:37:36.579 -04:00 [DBG] Login Url: /Account/Login
+2019-07-05 17:37:36.586 -04:00 [DBG] Login Return Url Parameter: ReturnUrl
+2019-07-05 17:37:36.590 -04:00 [DBG] Logout Url: /Account/Logout
+2019-07-05 17:37:36.591 -04:00 [DBG] ConsentUrl Url: /consent
+2019-07-05 17:37:36.593 -04:00 [DBG] Consent Return Url Parameter: returnUrl
+2019-07-05 17:37:36.594 -04:00 [DBG] Error Url: /home/error
+2019-07-05 17:37:36.596 -04:00 [DBG] Error Id Parameter: errorId
+2019-07-05 17:38:36.160 -04:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: https://localhost:5010
+2019-07-05 17:38:36.165 -04:00 [DBG] Client list checked and origin: https://localhost:5010 is allowed
+2019-07-05 17:38:36.168 -04:00 [DBG] CorsPolicyService allowed origin: https://localhost:5010
+2019-07-05 17:38:36.172 -04:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2019-07-05 17:38:36.271 -04:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2019-07-05 17:38:36.273 -04:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-07-05 17:38:36.280 -04:00 [DBG] Start discovery request
+2019-07-05 17:38:36.379 -04:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2019-07-05 17:38:36.390 -04:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2019-07-05 17:38:36.391 -04:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2019-07-05 17:38:36.407 -04:00 [DBG] Start authorize request
+2019-07-05 17:38:36.427 -04:00 [DBG] No user present in authorize request
+2019-07-05 17:38:36.437 -04:00 [DBG] Start authorize request protocol validation
+2019-07-05 17:38:36.475 -04:00 [ERR] Invalid client configuration for client produce-spa: no allowed grant type specified
+2019-07-05 17:38:36.503 -04:00 [INF] {"ClientId":"produce-spa","ClientName":"Produce SPA React App","Category":"Error","Name":"Invalid Client Configuration","EventType":"Error","Id":3001,"Message":"no allowed grant type specified","ActivityId":"0HLO1I3VFE8UD:00000004","TimeStamp":"2019-07-05T21:38:36.0000000Z","ProcessId":21640,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"InvalidClientConfigurationEvent"}
+2019-07-05 17:38:36.536 -04:00 [ERR] Unknown client or not enabled: produce-spa
+{"ClientId":null,"ClientName":null,"RedirectUri":null,"AllowedRedirectUris":null,"SubjectId":"anonymous","ResponseType":null,"ResponseMode":null,"GrantType":null,"RequestedScopes":"","State":null,"UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"client_id":"produce-spa","redirect_uri":"https://localhost:5010/callback","response_type":"code","scope":"openid profile ProduceAPI","state":"690ad647e7a34800be15bfea62b8267a","code_challenge":"JzOCCPiFtEnRUeGvBjFZxtGNnrTDyez_fn7YBq3lLsE","code_challenge_method":"S256"},"$type":"AuthorizeRequestValidationLog"}
+2019-07-05 17:38:36.561 -04:00 [ERR] Request validation failed
+2019-07-05 17:38:36.562 -04:00 [INF] {"ClientId":null,"ClientName":null,"RedirectUri":null,"AllowedRedirectUris":null,"SubjectId":"anonymous","ResponseType":null,"ResponseMode":null,"GrantType":null,"RequestedScopes":"","State":null,"UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"client_id":"produce-spa","redirect_uri":"https://localhost:5010/callback","response_type":"code","scope":"openid profile ProduceAPI","state":"690ad647e7a34800be15bfea62b8267a","code_challenge":"JzOCCPiFtEnRUeGvBjFZxtGNnrTDyez_fn7YBq3lLsE","code_challenge_method":"S256"},"$type":"AuthorizeRequestValidationLog"}
+2019-07-05 17:38:36.575 -04:00 [INF] {"ClientId":"produce-spa","ClientName":null,"RedirectUri":null,"Endpoint":"Authorize","SubjectId":null,"Scopes":"","GrantType":null,"Error":"unauthorized_client","ErrorDescription":"Unknown client or client not enabled","Category":"Token","Name":"Token Issued Failure","EventType":"Failure","Id":2001,"Message":null,"ActivityId":"0HLO1I3VFE8UD:00000004","TimeStamp":"2019-07-05T21:38:36.0000000Z","ProcessId":21640,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"TokenIssuedFailureEvent"}
+2019-07-05 17:39:17.504 -04:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: https://localhost:5010
+2019-07-05 17:39:17.507 -04:00 [DBG] Client list checked and origin: https://localhost:5010 is allowed
+2019-07-05 17:39:17.509 -04:00 [DBG] CorsPolicyService allowed origin: https://localhost:5010
+2019-07-05 17:39:17.510 -04:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2019-07-05 17:39:17.512 -04:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2019-07-05 17:39:17.513 -04:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-07-05 17:39:17.515 -04:00 [DBG] Start discovery request
+2019-07-05 17:39:17.569 -04:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2019-07-05 17:39:17.572 -04:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2019-07-05 17:39:17.575 -04:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2019-07-05 17:39:17.578 -04:00 [DBG] Start authorize request
+2019-07-05 17:39:17.579 -04:00 [DBG] No user present in authorize request
+2019-07-05 17:39:17.583 -04:00 [DBG] Start authorize request protocol validation
+2019-07-05 17:39:17.584 -04:00 [ERR] Invalid client configuration for client produce-spa: no allowed grant type specified
+2019-07-05 17:39:17.587 -04:00 [INF] {"ClientId":"produce-spa","ClientName":"Produce SPA React App","Category":"Error","Name":"Invalid Client Configuration","EventType":"Error","Id":3001,"Message":"no allowed grant type specified","ActivityId":"0HLO1I3VFE8UD:00000006","TimeStamp":"2019-07-05T21:39:17.0000000Z","ProcessId":21640,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"InvalidClientConfigurationEvent"}
+2019-07-05 17:39:17.599 -04:00 [ERR] Unknown client or not enabled: produce-spa
+{"ClientId":null,"ClientName":null,"RedirectUri":null,"AllowedRedirectUris":null,"SubjectId":"anonymous","ResponseType":null,"ResponseMode":null,"GrantType":null,"RequestedScopes":"","State":null,"UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"client_id":"produce-spa","redirect_uri":"https://localhost:5010/callback","response_type":"code","scope":"openid profile ProduceAPI","state":"c6006be4d26f451b83b772c186c866f4","code_challenge":"nDasR4gZp3BKqEo9qIcaNOch5FlDmTMpco2T-LTnuGU","code_challenge_method":"S256"},"$type":"AuthorizeRequestValidationLog"}
+2019-07-05 17:39:17.627 -04:00 [ERR] Request validation failed
+2019-07-05 17:39:17.629 -04:00 [INF] {"ClientId":null,"ClientName":null,"RedirectUri":null,"AllowedRedirectUris":null,"SubjectId":"anonymous","ResponseType":null,"ResponseMode":null,"GrantType":null,"RequestedScopes":"","State":null,"UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"client_id":"produce-spa","redirect_uri":"https://localhost:5010/callback","response_type":"code","scope":"openid profile ProduceAPI","state":"c6006be4d26f451b83b772c186c866f4","code_challenge":"nDasR4gZp3BKqEo9qIcaNOch5FlDmTMpco2T-LTnuGU","code_challenge_method":"S256"},"$type":"AuthorizeRequestValidationLog"}
+2019-07-05 17:39:17.641 -04:00 [INF] {"ClientId":"produce-spa","ClientName":null,"RedirectUri":null,"Endpoint":"Authorize","SubjectId":null,"Scopes":"","GrantType":null,"Error":"unauthorized_client","ErrorDescription":"Unknown client or client not enabled","Category":"Token","Name":"Token Issued Failure","EventType":"Failure","Id":2001,"Message":null,"ActivityId":"0HLO1I3VFE8UD:00000006","TimeStamp":"2019-07-05T21:39:17.0000000Z","ProcessId":21640,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"TokenIssuedFailureEvent"}
+2019-07-05 17:44:21.391 -04:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: https://localhost:5010
+2019-07-05 17:44:21.394 -04:00 [DBG] Client list checked and origin: https://localhost:5010 is allowed
+2019-07-05 17:44:21.397 -04:00 [DBG] CorsPolicyService allowed origin: https://localhost:5010
+2019-07-05 17:44:21.398 -04:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2019-07-05 17:44:21.400 -04:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2019-07-05 17:44:21.402 -04:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-07-05 17:44:21.403 -04:00 [DBG] Start discovery request
+2019-07-05 17:44:21.460 -04:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2019-07-05 17:44:21.467 -04:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2019-07-05 17:44:21.470 -04:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2019-07-05 17:44:21.475 -04:00 [DBG] Start authorize request
+2019-07-05 17:44:21.477 -04:00 [DBG] No user present in authorize request
+2019-07-05 17:44:21.490 -04:00 [DBG] Start authorize request protocol validation
+2019-07-05 17:44:21.492 -04:00 [ERR] Invalid client configuration for client produce-spa: no allowed grant type specified
+2019-07-05 17:44:21.495 -04:00 [INF] {"ClientId":"produce-spa","ClientName":"Produce SPA React App","Category":"Error","Name":"Invalid Client Configuration","EventType":"Error","Id":3001,"Message":"no allowed grant type specified","ActivityId":"0HLO1I3VFE8UH:00000001","TimeStamp":"2019-07-05T21:44:21.0000000Z","ProcessId":21640,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"InvalidClientConfigurationEvent"}
+2019-07-05 17:44:21.505 -04:00 [ERR] Unknown client or not enabled: produce-spa
+{"ClientId":null,"ClientName":null,"RedirectUri":null,"AllowedRedirectUris":null,"SubjectId":"anonymous","ResponseType":null,"ResponseMode":null,"GrantType":null,"RequestedScopes":"","State":null,"UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"client_id":"produce-spa","redirect_uri":"https://localhost:5010/callback","response_type":"code","scope":"openid profile ProduceAPI","state":"97e02843a65c4a52bf16e40dbb7779de","code_challenge":"ZAArIhpyEzZvBd4Y7IJKqOpO-H8zoJMzKbc6bYwW73Y","code_challenge_method":"S256"},"$type":"AuthorizeRequestValidationLog"}
+2019-07-05 17:44:21.516 -04:00 [ERR] Request validation failed
+2019-07-05 17:44:21.518 -04:00 [INF] {"ClientId":null,"ClientName":null,"RedirectUri":null,"AllowedRedirectUris":null,"SubjectId":"anonymous","ResponseType":null,"ResponseMode":null,"GrantType":null,"RequestedScopes":"","State":null,"UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"client_id":"produce-spa","redirect_uri":"https://localhost:5010/callback","response_type":"code","scope":"openid profile ProduceAPI","state":"97e02843a65c4a52bf16e40dbb7779de","code_challenge":"ZAArIhpyEzZvBd4Y7IJKqOpO-H8zoJMzKbc6bYwW73Y","code_challenge_method":"S256"},"$type":"AuthorizeRequestValidationLog"}
+2019-07-05 17:44:21.545 -04:00 [INF] {"ClientId":"produce-spa","ClientName":null,"RedirectUri":null,"Endpoint":"Authorize","SubjectId":null,"Scopes":"","GrantType":null,"Error":"unauthorized_client","ErrorDescription":"Unknown client or client not enabled","Category":"Token","Name":"Token Issued Failure","EventType":"Failure","Id":2001,"Message":null,"ActivityId":"0HLO1I3VFE8UH:00000001","TimeStamp":"2019-07-05T21:44:21.0000000Z","ProcessId":21640,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"TokenIssuedFailureEvent"}
+2019-07-05 17:55:15.548 -04:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-07-05 17:55:15.594 -04:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-07-05 17:55:15.598 -04:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-07-05 17:55:15.599 -04:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-07-05 17:55:15.600 -04:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-07-05 17:55:15.601 -04:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-07-05 17:55:15.606 -04:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-07-05 17:55:16.194 -04:00 [DBG] Login Url: /Account/Login
+2019-07-05 17:55:16.198 -04:00 [DBG] Login Return Url Parameter: ReturnUrl
+2019-07-05 17:55:16.200 -04:00 [DBG] Logout Url: /Account/Logout
+2019-07-05 17:55:16.201 -04:00 [DBG] ConsentUrl Url: /consent
+2019-07-05 17:55:16.202 -04:00 [DBG] Consent Return Url Parameter: returnUrl
+2019-07-05 17:55:16.203 -04:00 [DBG] Error Url: /home/error
+2019-07-05 17:55:16.204 -04:00 [DBG] Error Id Parameter: errorId
+2019-07-05 17:56:10.784 -04:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: https://localhost:5010
+2019-07-05 17:56:10.797 -04:00 [DBG] Client list checked and origin: https://localhost:5010 is allowed
+2019-07-05 17:56:10.800 -04:00 [DBG] CorsPolicyService allowed origin: https://localhost:5010
+2019-07-05 17:56:10.805 -04:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2019-07-05 17:56:10.906 -04:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2019-07-05 17:56:10.908 -04:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-07-05 17:56:10.914 -04:00 [DBG] Start discovery request
+2019-07-05 17:56:10.993 -04:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2019-07-05 17:56:11.001 -04:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2019-07-05 17:56:11.005 -04:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2019-07-05 17:56:11.019 -04:00 [DBG] Start authorize request
+2019-07-05 17:56:11.033 -04:00 [DBG] No user present in authorize request
+2019-07-05 17:56:11.040 -04:00 [DBG] Start authorize request protocol validation
+2019-07-05 17:56:11.063 -04:00 [ERR] Invalid client configuration for client produce-spa: no allowed grant type specified
+2019-07-05 17:56:11.085 -04:00 [INF] {"ClientId":"produce-spa","ClientName":"Produce SPA React App","Category":"Error","Name":"Invalid Client Configuration","EventType":"Error","Id":3001,"Message":"no allowed grant type specified","ActivityId":"0HLO1IDRA4JKJ:00000004","TimeStamp":"2019-07-05T21:56:11.0000000Z","ProcessId":9784,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"InvalidClientConfigurationEvent"}
+2019-07-05 17:56:11.115 -04:00 [ERR] Unknown client or not enabled: produce-spa
+{"ClientId":null,"ClientName":null,"RedirectUri":null,"AllowedRedirectUris":null,"SubjectId":"anonymous","ResponseType":null,"ResponseMode":null,"GrantType":null,"RequestedScopes":"","State":null,"UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"client_id":"produce-spa","redirect_uri":"https://localhost:5010/callback","response_type":"code","scope":"openid profile ProduceAPI","state":"c98470be01d342f293d8a0dad000a69c","code_challenge":"0L5H20BFjIAqpPlECxpxiCmfm62SLLjmS2va1MJjo6E","code_challenge_method":"S256"},"$type":"AuthorizeRequestValidationLog"}
+2019-07-05 17:56:11.132 -04:00 [ERR] Request validation failed
+2019-07-05 17:56:11.134 -04:00 [INF] {"ClientId":null,"ClientName":null,"RedirectUri":null,"AllowedRedirectUris":null,"SubjectId":"anonymous","ResponseType":null,"ResponseMode":null,"GrantType":null,"RequestedScopes":"","State":null,"UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"client_id":"produce-spa","redirect_uri":"https://localhost:5010/callback","response_type":"code","scope":"openid profile ProduceAPI","state":"c98470be01d342f293d8a0dad000a69c","code_challenge":"0L5H20BFjIAqpPlECxpxiCmfm62SLLjmS2va1MJjo6E","code_challenge_method":"S256"},"$type":"AuthorizeRequestValidationLog"}
+2019-07-05 17:56:11.143 -04:00 [INF] {"ClientId":"produce-spa","ClientName":null,"RedirectUri":null,"Endpoint":"Authorize","SubjectId":null,"Scopes":"","GrantType":null,"Error":"unauthorized_client","ErrorDescription":"Unknown client or client not enabled","Category":"Token","Name":"Token Issued Failure","EventType":"Failure","Id":2001,"Message":null,"ActivityId":"0HLO1IDRA4JKJ:00000004","TimeStamp":"2019-07-05T21:56:11.0000000Z","ProcessId":9784,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"TokenIssuedFailureEvent"}
+2019-07-05 17:58:37.935 -04:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: https://localhost:5010
+2019-07-05 17:58:37.937 -04:00 [DBG] Client list checked and origin: https://localhost:5010 is allowed
+2019-07-05 17:58:37.939 -04:00 [DBG] CorsPolicyService allowed origin: https://localhost:5010
+2019-07-05 17:58:37.941 -04:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2019-07-05 17:58:37.944 -04:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2019-07-05 17:58:37.945 -04:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-07-05 17:58:37.949 -04:00 [DBG] Start discovery request
+2019-07-05 17:58:37.983 -04:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2019-07-05 17:58:37.991 -04:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2019-07-05 17:58:37.994 -04:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2019-07-05 17:58:38.000 -04:00 [DBG] Start authorize request
+2019-07-05 17:58:38.002 -04:00 [DBG] No user present in authorize request
+2019-07-05 17:58:38.003 -04:00 [DBG] Start authorize request protocol validation
+2019-07-05 17:58:38.006 -04:00 [ERR] Invalid client configuration for client produce-spa: no allowed grant type specified
+2019-07-05 17:58:38.014 -04:00 [INF] {"ClientId":"produce-spa","ClientName":"Produce SPA React App","Category":"Error","Name":"Invalid Client Configuration","EventType":"Error","Id":3001,"Message":"no allowed grant type specified","ActivityId":"0HLO1IDRA4JKS:00000001","TimeStamp":"2019-07-05T21:58:38.0000000Z","ProcessId":9784,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"InvalidClientConfigurationEvent"}
+2019-07-05 17:58:38.028 -04:00 [ERR] Unknown client or not enabled: produce-spa
+{"ClientId":null,"ClientName":null,"RedirectUri":null,"AllowedRedirectUris":null,"SubjectId":"anonymous","ResponseType":null,"ResponseMode":null,"GrantType":null,"RequestedScopes":"","State":null,"UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"client_id":"produce-spa","redirect_uri":"https://localhost:5010/callback","response_type":"code","scope":"openid profile ProduceAPI","state":"87f460f7f1be4d83a5b947ca289519a5","code_challenge":"5q8P0hrnqsQtmShMxkgZcQ3NNFZXsrlFpNSOc9fU2Eo","code_challenge_method":"S256"},"$type":"AuthorizeRequestValidationLog"}
+2019-07-05 17:58:38.043 -04:00 [ERR] Request validation failed
+2019-07-05 17:58:38.044 -04:00 [INF] {"ClientId":null,"ClientName":null,"RedirectUri":null,"AllowedRedirectUris":null,"SubjectId":"anonymous","ResponseType":null,"ResponseMode":null,"GrantType":null,"RequestedScopes":"","State":null,"UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"client_id":"produce-spa","redirect_uri":"https://localhost:5010/callback","response_type":"code","scope":"openid profile ProduceAPI","state":"87f460f7f1be4d83a5b947ca289519a5","code_challenge":"5q8P0hrnqsQtmShMxkgZcQ3NNFZXsrlFpNSOc9fU2Eo","code_challenge_method":"S256"},"$type":"AuthorizeRequestValidationLog"}
+2019-07-05 17:58:38.071 -04:00 [INF] {"ClientId":"produce-spa","ClientName":null,"RedirectUri":null,"Endpoint":"Authorize","SubjectId":null,"Scopes":"","GrantType":null,"Error":"unauthorized_client","ErrorDescription":"Unknown client or client not enabled","Category":"Token","Name":"Token Issued Failure","EventType":"Failure","Id":2001,"Message":null,"ActivityId":"0HLO1IDRA4JKS:00000001","TimeStamp":"2019-07-05T21:58:38.0000000Z","ProcessId":9784,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"TokenIssuedFailureEvent"}
+2019-07-05 18:02:12.655 -04:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-07-05 18:02:12.709 -04:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-07-05 18:02:12.714 -04:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-07-05 18:02:12.716 -04:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-07-05 18:02:12.717 -04:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-07-05 18:02:12.718 -04:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-07-05 18:02:12.721 -04:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-07-05 18:02:13.312 -04:00 [DBG] Login Url: /Account/Login
+2019-07-05 18:02:13.346 -04:00 [DBG] Login Return Url Parameter: ReturnUrl
+2019-07-05 18:02:13.350 -04:00 [DBG] Logout Url: /Account/Logout
+2019-07-05 18:02:13.356 -04:00 [DBG] ConsentUrl Url: /consent
+2019-07-05 18:02:13.359 -04:00 [DBG] Consent Return Url Parameter: returnUrl
+2019-07-05 18:02:13.363 -04:00 [DBG] Error Url: /home/error
+2019-07-05 18:02:13.370 -04:00 [DBG] Error Id Parameter: errorId
+2019-07-05 18:02:37.127 -04:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: https://localhost:5010
+2019-07-05 18:02:37.132 -04:00 [DBG] Client list checked and origin: https://localhost:5010 is allowed
+2019-07-05 18:02:37.133 -04:00 [DBG] CorsPolicyService allowed origin: https://localhost:5010
+2019-07-05 18:02:37.137 -04:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2019-07-05 18:02:37.232 -04:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2019-07-05 18:02:37.235 -04:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-07-05 18:02:37.242 -04:00 [DBG] Start discovery request
+2019-07-05 18:02:37.322 -04:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2019-07-05 18:02:37.335 -04:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2019-07-05 18:02:37.340 -04:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2019-07-05 18:02:37.349 -04:00 [DBG] Start authorize request
+2019-07-05 18:02:37.369 -04:00 [DBG] No user present in authorize request
+2019-07-05 18:02:37.377 -04:00 [DBG] Start authorize request protocol validation
+2019-07-05 18:02:37.399 -04:00 [ERR] Invalid client configuration for client produce-spa: no allowed grant type specified
+2019-07-05 18:02:37.423 -04:00 [INF] {"ClientId":"produce-spa","ClientName":"Produce SPA React App","Category":"Error","Name":"Invalid Client Configuration","EventType":"Error","Id":3001,"Message":"no allowed grant type specified","ActivityId":"0HLO1IHNKG9DE:00000002","TimeStamp":"2019-07-05T22:02:37.0000000Z","ProcessId":6004,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"InvalidClientConfigurationEvent"}
+2019-07-05 18:02:37.455 -04:00 [ERR] Unknown client or not enabled: produce-spa
+{"ClientId":null,"ClientName":null,"RedirectUri":null,"AllowedRedirectUris":null,"SubjectId":"anonymous","ResponseType":null,"ResponseMode":null,"GrantType":null,"RequestedScopes":"","State":null,"UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"client_id":"produce-spa","redirect_uri":"https://localhost:5010/callback","response_type":"code","scope":"openid profile ProduceAPI","state":"e95ad4a6fdd84cd3ad6a62c37b267085","code_challenge":"Vh16op8GRpm4LYqhV61nCFlIGvfD370cM8E6-NeOOG8","code_challenge_method":"S256"},"$type":"AuthorizeRequestValidationLog"}
+2019-07-05 18:02:37.471 -04:00 [ERR] Request validation failed
+2019-07-05 18:02:37.471 -04:00 [INF] {"ClientId":null,"ClientName":null,"RedirectUri":null,"AllowedRedirectUris":null,"SubjectId":"anonymous","ResponseType":null,"ResponseMode":null,"GrantType":null,"RequestedScopes":"","State":null,"UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"client_id":"produce-spa","redirect_uri":"https://localhost:5010/callback","response_type":"code","scope":"openid profile ProduceAPI","state":"e95ad4a6fdd84cd3ad6a62c37b267085","code_challenge":"Vh16op8GRpm4LYqhV61nCFlIGvfD370cM8E6-NeOOG8","code_challenge_method":"S256"},"$type":"AuthorizeRequestValidationLog"}
+2019-07-05 18:02:37.479 -04:00 [INF] {"ClientId":"produce-spa","ClientName":null,"RedirectUri":null,"Endpoint":"Authorize","SubjectId":null,"Scopes":"","GrantType":null,"Error":"unauthorized_client","ErrorDescription":"Unknown client or client not enabled","Category":"Token","Name":"Token Issued Failure","EventType":"Failure","Id":2001,"Message":null,"ActivityId":"0HLO1IHNKG9DE:00000002","TimeStamp":"2019-07-05T22:02:37.0000000Z","ProcessId":6004,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"TokenIssuedFailureEvent"}
+2019-07-05 18:06:23.036 -04:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: https://localhost:5010
+2019-07-05 18:06:23.039 -04:00 [DBG] Client list checked and origin: https://localhost:5010 is allowed
+2019-07-05 18:06:23.041 -04:00 [DBG] CorsPolicyService allowed origin: https://localhost:5010
+2019-07-05 18:06:23.043 -04:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2019-07-05 18:06:23.046 -04:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2019-07-05 18:06:23.052 -04:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-07-05 18:06:23.058 -04:00 [DBG] Start discovery request
+2019-07-05 18:06:23.112 -04:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2019-07-05 18:06:23.124 -04:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2019-07-05 18:06:23.131 -04:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2019-07-05 18:06:23.139 -04:00 [DBG] Start authorize request
+2019-07-05 18:06:23.141 -04:00 [DBG] No user present in authorize request
+2019-07-05 18:06:23.147 -04:00 [DBG] Start authorize request protocol validation
+2019-07-05 18:06:23.157 -04:00 [ERR] Invalid client configuration for client produce-spa: no allowed grant type specified
+2019-07-05 18:06:23.160 -04:00 [INF] {"ClientId":"produce-spa","ClientName":"Produce SPA React App","Category":"Error","Name":"Invalid Client Configuration","EventType":"Error","Id":3001,"Message":"no allowed grant type specified","ActivityId":"0HLO1IHNKG9DJ:00000001","TimeStamp":"2019-07-05T22:06:23.0000000Z","ProcessId":6004,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"InvalidClientConfigurationEvent"}
+2019-07-05 18:06:23.177 -04:00 [ERR] Unknown client or not enabled: produce-spa
+{"ClientId":null,"ClientName":null,"RedirectUri":null,"AllowedRedirectUris":null,"SubjectId":"anonymous","ResponseType":null,"ResponseMode":null,"GrantType":null,"RequestedScopes":"","State":null,"UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"client_id":"produce-spa","redirect_uri":"https://localhost:5010/callback","response_type":"code","scope":"openid profile ProduceAPI","state":"a9fa134fcf41403b99bc3b11643b943e","code_challenge":"Cmgxs0MOEKV0tpq88My25ty85yRAqGzpyipfrDDUeaI","code_challenge_method":"S256"},"$type":"AuthorizeRequestValidationLog"}
+2019-07-05 18:06:23.208 -04:00 [ERR] Request validation failed
+2019-07-05 18:06:23.209 -04:00 [INF] {"ClientId":null,"ClientName":null,"RedirectUri":null,"AllowedRedirectUris":null,"SubjectId":"anonymous","ResponseType":null,"ResponseMode":null,"GrantType":null,"RequestedScopes":"","State":null,"UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"client_id":"produce-spa","redirect_uri":"https://localhost:5010/callback","response_type":"code","scope":"openid profile ProduceAPI","state":"a9fa134fcf41403b99bc3b11643b943e","code_challenge":"Cmgxs0MOEKV0tpq88My25ty85yRAqGzpyipfrDDUeaI","code_challenge_method":"S256"},"$type":"AuthorizeRequestValidationLog"}
+2019-07-05 18:06:23.241 -04:00 [INF] {"ClientId":"produce-spa","ClientName":null,"RedirectUri":null,"Endpoint":"Authorize","SubjectId":null,"Scopes":"","GrantType":null,"Error":"unauthorized_client","ErrorDescription":"Unknown client or client not enabled","Category":"Token","Name":"Token Issued Failure","EventType":"Failure","Id":2001,"Message":null,"ActivityId":"0HLO1IHNKG9DJ:00000001","TimeStamp":"2019-07-05T22:06:23.0000000Z","ProcessId":6004,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"TokenIssuedFailureEvent"}
+2019-07-05 18:07:30.937 -04:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-07-05 18:07:30.985 -04:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-07-05 18:07:30.989 -04:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-07-05 18:07:30.990 -04:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-07-05 18:07:30.991 -04:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-07-05 18:07:30.993 -04:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-07-05 18:07:30.995 -04:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-07-05 18:07:31.828 -04:00 [DBG] Login Url: /Account/Login
+2019-07-05 18:07:31.857 -04:00 [DBG] Login Return Url Parameter: ReturnUrl
+2019-07-05 18:07:31.861 -04:00 [DBG] Logout Url: /Account/Logout
+2019-07-05 18:07:31.865 -04:00 [DBG] ConsentUrl Url: /consent
+2019-07-05 18:07:31.872 -04:00 [DBG] Consent Return Url Parameter: returnUrl
+2019-07-05 18:07:31.895 -04:00 [DBG] Error Url: /home/error
+2019-07-05 18:07:31.899 -04:00 [DBG] Error Id Parameter: errorId
+2019-07-05 18:07:43.454 -04:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: https://localhost:5010
+2019-07-05 18:07:43.459 -04:00 [DBG] Client list checked and origin: https://localhost:5010 is allowed
+2019-07-05 18:07:43.460 -04:00 [DBG] CorsPolicyService allowed origin: https://localhost:5010
+2019-07-05 18:07:43.463 -04:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2019-07-05 18:07:43.603 -04:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2019-07-05 18:07:43.611 -04:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-07-05 18:07:43.629 -04:00 [DBG] Start discovery request
+2019-07-05 18:07:43.815 -04:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2019-07-05 18:07:43.839 -04:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2019-07-05 18:07:43.844 -04:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2019-07-05 18:07:43.861 -04:00 [DBG] Start authorize request
+2019-07-05 18:07:43.895 -04:00 [DBG] No user present in authorize request
+2019-07-05 18:07:43.910 -04:00 [DBG] Start authorize request protocol validation
+2019-07-05 18:07:43.986 -04:00 [DBG] client configuration validation for client produce-spa succeeded.
+2019-07-05 18:07:44.018 -04:00 [DBG] Checking for PKCE parameters
+2019-07-05 18:07:44.153 -04:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-05 18:07:44.179 -04:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"produce-spa","ClientName":"Produce SPA React App","RedirectUri":"https://localhost:5010/callback","AllowedRedirectUris":["https://localhost:5010/callback"],"SubjectId":"anonymous","ResponseType":"code","ResponseMode":"query","GrantType":"authorization_code","RequestedScopes":"openid profile ProduceAPI","State":"5ff384ef168a4ab2953412b05db169b6","UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"client_id":"produce-spa","redirect_uri":"https://localhost:5010/callback","response_type":"code","scope":"openid profile ProduceAPI","state":"5ff384ef168a4ab2953412b05db169b6","code_challenge":"3dXUAv6IpQxj_bRPSExCWMf-dXGpIaq2uxJlXhAF2Eo","code_challenge_method":"S256"},"$type":"AuthorizeRequestValidationLog"}
+2019-07-05 18:07:44.254 -04:00 [INF] Showing login: User is not authenticated
+2019-07-05 18:07:44.376 -04:00 [DBG] Start authorize request protocol validation
+2019-07-05 18:07:44.377 -04:00 [DBG] client configuration validation for client produce-spa succeeded.
+2019-07-05 18:07:44.379 -04:00 [DBG] Checking for PKCE parameters
+2019-07-05 18:07:44.380 -04:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-05 18:07:44.384 -04:00 [DBG] client configuration validation for client produce-spa succeeded.
+2019-07-05 18:07:53.454 -04:00 [DBG] CORS request made for path: /Account/Login from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2019-07-05 18:07:53.527 -04:00 [DBG] Start authorize request protocol validation
+2019-07-05 18:07:53.527 -04:00 [DBG] client configuration validation for client produce-spa succeeded.
+2019-07-05 18:07:53.529 -04:00 [DBG] Checking for PKCE parameters
+2019-07-05 18:07:53.530 -04:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-05 18:07:54.207 -04:00 [DBG] Augmenting SignInContext
+2019-07-05 18:07:54.210 -04:00 [DBG] Adding idp claim with value: local
+2019-07-05 18:07:54.211 -04:00 [DBG] Adding amr claim with value: pwd
+2019-07-05 18:07:54.212 -04:00 [DBG] Adding auth_time claim with value: 1562364474
+2019-07-05 18:07:54.227 -04:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2019-07-05 18:07:54.260 -04:00 [INF] {"Username":"alice","Provider":null,"ProviderUserId":null,"SubjectId":"d49b8126-8cea-47fb-b9d8-033fa649e3ad","DisplayName":"alice","Endpoint":"UI","Category":"Authentication","Name":"User Login Success","EventType":"Success","Id":1000,"Message":null,"ActivityId":"0HLO1IKMI1HEV:00000004","TimeStamp":"2019-07-05T22:07:54.0000000Z","ProcessId":20660,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"UserLoginSuccessEvent"}
+2019-07-05 18:07:54.271 -04:00 [DBG] client configuration validation for client produce-spa succeeded.
+2019-07-05 18:07:54.309 -04:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2019-07-05 18:07:54.315 -04:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2019-07-05 18:07:54.318 -04:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2019-07-05 18:07:54.332 -04:00 [DBG] Start authorize callback request
+2019-07-05 18:07:54.349 -04:00 [DBG] User in authorize request: d49b8126-8cea-47fb-b9d8-033fa649e3ad
+2019-07-05 18:07:54.353 -04:00 [DBG] Start authorize request protocol validation
+2019-07-05 18:07:54.356 -04:00 [DBG] client configuration validation for client produce-spa succeeded.
+2019-07-05 18:07:54.359 -04:00 [DBG] Checking for PKCE parameters
+2019-07-05 18:07:54.360 -04:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-05 18:07:54.364 -04:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"produce-spa","ClientName":"Produce SPA React App","RedirectUri":"https://localhost:5010/callback","AllowedRedirectUris":["https://localhost:5010/callback"],"SubjectId":"d49b8126-8cea-47fb-b9d8-033fa649e3ad","ResponseType":"code","ResponseMode":"query","GrantType":"authorization_code","RequestedScopes":"openid profile ProduceAPI","State":"5ff384ef168a4ab2953412b05db169b6","UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"930ac7a630825d8d9524f2f71aa27ef2","Raw":{"client_id":"produce-spa","redirect_uri":"https://localhost:5010/callback","response_type":"code","scope":"openid profile ProduceAPI","state":"5ff384ef168a4ab2953412b05db169b6","code_challenge":"3dXUAv6IpQxj_bRPSExCWMf-dXGpIaq2uxJlXhAF2Eo","code_challenge_method":"S256"},"$type":"AuthorizeRequestValidationLog"}
+2019-07-05 18:07:54.468 -04:00 [DBG] user_consent grant with value: produce-spa|d49b8126-8cea-47fb-b9d8-033fa649e3ad not found in store.
+2019-07-05 18:07:54.472 -04:00 [DBG] Found no prior consent from consent store, consent is required
+2019-07-05 18:07:54.473 -04:00 [INF] Showing consent: User has not yet consented
+2019-07-05 18:07:54.527 -04:00 [DBG] Start authorize request protocol validation
+2019-07-05 18:07:54.531 -04:00 [DBG] client configuration validation for client produce-spa succeeded.
+2019-07-05 18:07:54.537 -04:00 [DBG] Checking for PKCE parameters
+2019-07-05 18:07:54.540 -04:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-05 18:07:54.549 -04:00 [DBG] client configuration validation for client produce-spa succeeded.
+2019-07-05 18:08:01.726 -04:00 [DBG] CORS request made for path: /consent from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2019-07-05 18:08:01.766 -04:00 [DBG] Start authorize request protocol validation
+2019-07-05 18:08:01.766 -04:00 [DBG] client configuration validation for client produce-spa succeeded.
+2019-07-05 18:08:01.769 -04:00 [DBG] Checking for PKCE parameters
+2019-07-05 18:08:01.771 -04:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-05 18:08:01.778 -04:00 [INF] {"SubjectId":"d49b8126-8cea-47fb-b9d8-033fa649e3ad","ClientId":"produce-spa","RequestedScopes":["openid","profile","ProduceAPI"],"GrantedScopes":["openid","profile","ProduceAPI"],"ConsentRemembered":true,"Category":"Grants","Name":"Consent granted","EventType":"Information","Id":4000,"Message":null,"ActivityId":"0HLO1IKMI1HF3:00000004","TimeStamp":"2019-07-05T22:08:01.0000000Z","ProcessId":20660,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"ConsentGrantedEvent"}
+2019-07-05 18:08:01.850 -04:00 [DBG] client configuration validation for client produce-spa succeeded.
+2019-07-05 18:08:02.021 -04:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2019-07-05 18:08:02.024 -04:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2019-07-05 18:08:02.029 -04:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2019-07-05 18:08:02.032 -04:00 [DBG] Start authorize callback request
+2019-07-05 18:08:02.040 -04:00 [DBG] User in authorize request: d49b8126-8cea-47fb-b9d8-033fa649e3ad
+2019-07-05 18:08:02.042 -04:00 [DBG] Start authorize request protocol validation
+2019-07-05 18:08:02.045 -04:00 [DBG] client configuration validation for client produce-spa succeeded.
+2019-07-05 18:08:02.048 -04:00 [DBG] Checking for PKCE parameters
+2019-07-05 18:08:02.052 -04:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2019-07-05 18:08:02.061 -04:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"produce-spa","ClientName":"Produce SPA React App","RedirectUri":"https://localhost:5010/callback","AllowedRedirectUris":["https://localhost:5010/callback"],"SubjectId":"d49b8126-8cea-47fb-b9d8-033fa649e3ad","ResponseType":"code","ResponseMode":"query","GrantType":"authorization_code","RequestedScopes":"openid profile ProduceAPI","State":"5ff384ef168a4ab2953412b05db169b6","UiLocales":null,"Nonce":null,"AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"930ac7a630825d8d9524f2f71aa27ef2","Raw":{"client_id":"produce-spa","redirect_uri":"https://localhost:5010/callback","response_type":"code","scope":"openid profile ProduceAPI","state":"5ff384ef168a4ab2953412b05db169b6","code_challenge":"3dXUAv6IpQxj_bRPSExCWMf-dXGpIaq2uxJlXhAF2Eo","code_challenge_method":"S256"},"$type":"AuthorizeRequestValidationLog"}
+2019-07-05 18:08:02.099 -04:00 [DBG] user_consent grant with value: produce-spa|d49b8126-8cea-47fb-b9d8-033fa649e3ad not found in store.
+2019-07-05 18:08:02.101 -04:00 [DBG] Found no prior consent from consent store, consent is required
+2019-07-05 18:08:02.123 -04:00 [INF] User consented to scopes: ["openid","profile","ProduceAPI"]
+2019-07-05 18:08:02.128 -04:00 [DBG] User indicated to remember consent for scopes: ["openid","profile","ProduceAPI"]
+2019-07-05 18:08:02.134 -04:00 [DBG] Client allows remembering consent, and consent given. Updating consent store for subject: d49b8126-8cea-47fb-b9d8-033fa649e3ad
+2019-07-05 18:08:02.177 -04:00 [DBG] Creating Authorization Code Flow response.
+2019-07-05 18:08:02.236 -04:00 [INF] {"ClientId":"produce-spa","ClientName":"Produce SPA React App","RedirectUri":"https://localhost:5010/callback","Endpoint":"Authorize","SubjectId":"d49b8126-8cea-47fb-b9d8-033fa649e3ad","Scopes":"openid profile ProduceAPI","GrantType":"authorization_code","Tokens":[{"TokenType":"code","TokenValue":"****2477","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLO1IKMI1HF3:00000006","TimeStamp":"2019-07-05T22:08:02.0000000Z","ProcessId":20660,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"TokenIssuedSuccessEvent"}
+2019-07-05 18:08:02.249 -04:00 [INF] Authorize endpoint response
+{"SubjectId":"d49b8126-8cea-47fb-b9d8-033fa649e3ad","ClientId":"produce-spa","RedirectUri":"https://localhost:5010/callback","State":"5ff384ef168a4ab2953412b05db169b6","Scope":"openid profile ProduceAPI","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2019-07-05 18:08:02.284 -04:00 [DBG] Augmenting SignInContext
+2019-07-05 18:08:02.286 -04:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2019-07-05 18:08:03.896 -04:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: https://localhost:5010
+2019-07-05 18:08:03.898 -04:00 [DBG] Client list checked and origin: https://localhost:5010 is allowed
+2019-07-05 18:08:03.902 -04:00 [DBG] CorsPolicyService allowed origin: https://localhost:5010
+2019-07-05 18:08:03.904 -04:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2019-07-05 18:08:03.906 -04:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2019-07-05 18:08:03.909 -04:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-07-05 18:08:03.916 -04:00 [DBG] Start discovery request
+2019-07-05 18:08:04.040 -04:00 [DBG] CORS request made for path: /connect/token from origin: https://localhost:5010
+2019-07-05 18:08:04.044 -04:00 [DBG] Client list checked and origin: https://localhost:5010 is allowed
+2019-07-05 18:08:04.047 -04:00 [DBG] CorsPolicyService allowed origin: https://localhost:5010
+2019-07-05 18:08:04.049 -04:00 [DBG] Request path /connect/token matched to endpoint type Token
+2019-07-05 18:08:04.064 -04:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2019-07-05 18:08:04.065 -04:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2019-07-05 18:08:04.093 -04:00 [DBG] Start token request.
+2019-07-05 18:08:04.115 -04:00 [DBG] Start client validation
+2019-07-05 18:08:04.132 -04:00 [DBG] Start parsing Basic Authentication secret
+2019-07-05 18:08:04.148 -04:00 [DBG] Start parsing for secret in post body
+2019-07-05 18:08:04.149 -04:00 [DBG] client id without secret found
+2019-07-05 18:08:04.151 -04:00 [DBG] Parser found secret: PostBodySecretParser
+2019-07-05 18:08:04.152 -04:00 [DBG] Secret id found: produce-spa
+2019-07-05 18:08:04.154 -04:00 [DBG] client configuration validation for client produce-spa succeeded.
+2019-07-05 18:08:04.160 -04:00 [DBG] Public Client - skipping secret validation success
+2019-07-05 18:08:04.161 -04:00 [DBG] Client validation success
+2019-07-05 18:08:04.163 -04:00 [INF] {"ClientId":"produce-spa","AuthenticationMethod":"NoSecret","Category":"Authentication","Name":"Client Authentication Success","EventType":"Success","Id":1010,"Message":null,"ActivityId":"0HLO1IKMI1HF1:00000003","TimeStamp":"2019-07-05T22:08:04.0000000Z","ProcessId":20660,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"ClientAuthenticationSuccessEvent"}
+2019-07-05 18:08:04.195 -04:00 [DBG] Start token request validation
+2019-07-05 18:08:04.246 -04:00 [DBG] Start validation of authorization code token request
+2019-07-05 18:08:04.321 -04:00 [DBG] Client required a proof key for code exchange. Starting PKCE validation
+2019-07-05 18:08:04.333 -04:00 [DBG] Validation of authorization code token request success
+2019-07-05 18:08:04.343 -04:00 [INF] Token request validation success
+{"ClientId":"produce-spa","ClientName":"Produce SPA React App","GrantType":"authorization_code","Scopes":null,"AuthorizationCode":"8f2c2a1f4662a70d2e70395b76d99a65eca14a9f1987e1efdb63abe14ed92477","RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"client_id":"produce-spa","code":"8f2c2a1f4662a70d2e70395b76d99a65eca14a9f1987e1efdb63abe14ed92477","redirect_uri":"https://localhost:5010/callback","code_verifier":"28bbeadb510b46c1a6fdb776c3f773b8d4ada78153b64ba1ae34047d27bb60d8700c9151ecfb4222817bc166759eebb4","grant_type":"authorization_code"},"$type":"TokenRequestValidationLog"}
+2019-07-05 18:08:04.405 -04:00 [DBG] client configuration validation for client produce-spa succeeded.
+2019-07-05 18:08:04.432 -04:00 [DBG] Getting claims for access token for client: produce-spa
+2019-07-05 18:08:04.438 -04:00 [DBG] Getting claims for access token for subject: d49b8126-8cea-47fb-b9d8-033fa649e3ad
+2019-07-05 18:08:04.606 -04:00 [DBG] client configuration validation for client produce-spa succeeded.
+2019-07-05 18:08:04.619 -04:00 [DBG] Getting claims for identity token for subject: d49b8126-8cea-47fb-b9d8-033fa649e3ad and client: produce-spa
+2019-07-05 18:08:04.620 -04:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2019-07-05 18:08:04.630 -04:00 [INF] {"ClientId":"produce-spa","ClientName":"Produce SPA React App","RedirectUri":null,"Endpoint":"Token","SubjectId":null,"Scopes":"openid profile ProduceAPI","GrantType":"authorization_code","Tokens":[{"TokenType":"id_token","TokenValue":"****wORA","$type":"Token"},{"TokenType":"access_token","TokenValue":"****RffA","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HLO1IKMI1HF1:00000003","TimeStamp":"2019-07-05T22:08:04.0000000Z","ProcessId":20660,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"TokenIssuedSuccessEvent"}
+2019-07-05 18:08:04.640 -04:00 [DBG] Token request success.
+2019-07-05 18:08:04.672 -04:00 [DBG] CORS request made for path: /connect/userinfo from origin: https://localhost:5010
+2019-07-05 18:08:04.674 -04:00 [DBG] Client list checked and origin: https://localhost:5010 is allowed
+2019-07-05 18:08:04.676 -04:00 [DBG] CorsPolicyService allowed origin: https://localhost:5010
+2019-07-05 18:08:04.693 -04:00 [DBG] CORS request made for path: /connect/userinfo from origin: https://localhost:5010
+2019-07-05 18:08:04.694 -04:00 [DBG] Client list checked and origin: https://localhost:5010 is allowed
+2019-07-05 18:08:04.696 -04:00 [DBG] CorsPolicyService allowed origin: https://localhost:5010
+2019-07-05 18:08:04.698 -04:00 [DBG] Request path /connect/userinfo matched to endpoint type Userinfo
+2019-07-05 18:08:04.703 -04:00 [DBG] Endpoint enabled: Userinfo, successfully created handler: IdentityServer4.Endpoints.UserInfoEndpoint
+2019-07-05 18:08:04.705 -04:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.UserInfoEndpoint for /connect/userinfo
+2019-07-05 18:08:04.726 -04:00 [DBG] Start userinfo request
+2019-07-05 18:08:04.737 -04:00 [DBG] Bearer token found in header
+2019-07-05 18:08:04.847 -04:00 [DBG] client configuration validation for client produce-spa succeeded.
+2019-07-05 18:08:04.852 -04:00 [DBG] client configuration validation for client produce-spa succeeded.
+2019-07-05 18:08:04.859 -04:00 [DBG] Calling into custom token validator: IdentityServer4.Validation.DefaultCustomTokenValidator
+2019-07-05 18:08:04.863 -04:00 [DBG] Token validation success
+{"ClientId":null,"ClientName":null,"ValidateLifetime":true,"AccessTokenType":"Jwt","ExpectedScope":"openid","TokenHandle":null,"JwtId":null,"Claims":{"nbf":1562364484,"exp":1562368084,"iss":"http://localhost:5000","aud":["http://localhost:5000/resources","ProduceAPI"],"client_id":"produce-spa","sub":"d49b8126-8cea-47fb-b9d8-033fa649e3ad","auth_time":1562364474,"idp":"local","scope":["openid","profile","ProduceAPI"],"amr":"pwd"},"$type":"TokenValidationLog"}
+2019-07-05 18:08:04.880 -04:00 [DBG] Creating userinfo response
+2019-07-05 18:08:04.892 -04:00 [DBG] Scopes in access token: openid profile ProduceAPI
+2019-07-05 18:08:04.901 -04:00 [DBG] Scopes in access token: openid profile ProduceAPI
+2019-07-05 18:08:04.914 -04:00 [DBG] Requested claim types: sub name family_name given_name middle_name nickname preferred_username profile picture website gender birthdate zoneinfo locale updated_at
+2019-07-05 18:08:04.917 -04:00 [DBG] Scopes in access token: openid profile ProduceAPI
+2019-07-05 18:08:04.930 -04:00 [INF] Profile service returned the following claim types: sub name given_name family_name website preferred_username
+2019-07-05 18:08:04.932 -04:00 [DBG] End userinfo request
+2019-07-05 18:08:40.646 -04:00 [DBG] CORS request made for path: /.well-known/openid-configuration from origin: https://localhost:5010
+2019-07-05 18:08:40.652 -04:00 [DBG] Client list checked and origin: https://localhost:5010 is allowed
+2019-07-05 18:08:40.655 -04:00 [DBG] CorsPolicyService allowed origin: https://localhost:5010
+2019-07-05 18:08:40.657 -04:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2019-07-05 18:08:40.662 -04:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2019-07-05 18:08:40.664 -04:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2019-07-05 18:08:40.673 -04:00 [DBG] Start discovery request
+2019-07-05 18:41:45.005 -04:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-07-05 18:41:45.055 -04:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-07-05 18:41:45.067 -04:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-07-05 18:41:45.068 -04:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-07-05 18:41:45.069 -04:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-07-05 18:41:45.070 -04:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-07-05 18:41:45.072 -04:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-07-05 18:41:46.103 -04:00 [DBG] Login Url: /Account/Login
+2019-07-05 18:41:46.121 -04:00 [DBG] Login Return Url Parameter: ReturnUrl
+2019-07-05 18:41:46.150 -04:00 [DBG] Logout Url: /Account/Logout
+2019-07-05 18:41:46.156 -04:00 [DBG] ConsentUrl Url: /consent
+2019-07-05 18:41:46.159 -04:00 [DBG] Consent Return Url Parameter: returnUrl
+2019-07-05 18:41:46.161 -04:00 [DBG] Error Url: /home/error
+2019-07-05 18:41:46.165 -04:00 [DBG] Error Id Parameter: errorId
+2019-07-05 18:41:47.061 -04:00 [WRN] Failed to determine the https port for redirect.
+2019-07-05 18:42:49.893 -04:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2019-07-05 18:42:49.942 -04:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2019-07-05 18:42:49.947 -04:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for authentication
+2019-07-05 18:42:49.947 -04:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-in
+2019-07-05 18:42:49.948 -04:00 [DBG] Using Identity.External as default ASP.NET Core scheme for sign-out
+2019-07-05 18:42:49.949 -04:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for challenge
+2019-07-05 18:42:49.951 -04:00 [DBG] Using Identity.Application as default ASP.NET Core scheme for forbid
+2019-07-05 18:42:50.675 -04:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.BeginAuthenticateAsServer(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken, AsyncCallback asyncCallback, Object asyncState)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__51_0(SslServerAuthenticationOptions arg1, CancellationToken arg2, AsyncCallback callback, Object state)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl[TArg1,TArg2](Func`5 beginMethod, Func`2 endFunction, Action`1 endAction, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state)
+   at System.Net.Security.SslStream.AuthenticateAsServerAsync(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionAdapter.InnerOnConnectionAsync(ConnectionAdapterContext context)
+2019-07-05 18:42:51.067 -04:00 [DBG] Login Url: /Account/Login
+2019-07-05 18:42:51.069 -04:00 [DBG] Login Return Url Parameter: ReturnUrl
+2019-07-05 18:42:51.073 -04:00 [DBG] Logout Url: /Account/Logout
+2019-07-05 18:42:51.075 -04:00 [DBG] ConsentUrl Url: /consent
+2019-07-05 18:42:51.076 -04:00 [DBG] Consent Return Url Parameter: returnUrl
+2019-07-05 18:42:51.076 -04:00 [DBG] Error Url: /home/error
+2019-07-05 18:42:51.077 -04:00 [DBG] Error Id Parameter: errorId
+2019-07-05 18:43:07.378 -04:00 [DBG] CORS request made for path: /Account/Logout from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2019-07-05 18:43:07.483 -04:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2019-07-05 18:43:07.486 -04:00 [INF] AuthenticationScheme: Identity.External signed out.
+2019-07-05 18:43:07.488 -04:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2019-07-05 18:43:07.509 -04:00 [INF] {"SubjectId":"d49b8126-8cea-47fb-b9d8-033fa649e3ad","DisplayName":"Alice Smith","Category":"Authentication","Name":"User Logout Success","EventType":"Success","Id":1002,"Message":null,"ActivityId":"0HLO1J8E3BJCK:00000006","TimeStamp":"2019-07-05T22:43:07.0000000Z","ProcessId":2620,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"UserLogoutSuccessEvent"}
+2019-07-05 18:43:07.632 -04:00 [DBG] Request path /connect/endsession/callback matched to endpoint type Endsession
+2019-07-05 18:43:07.641 -04:00 [DBG] Endpoint enabled: Endsession, successfully created handler: IdentityServer4.Endpoints.EndSessionCallbackEndpoint
+2019-07-05 18:43:07.643 -04:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.EndSessionCallbackEndpoint for /connect/endsession/callback
+2019-07-05 18:43:07.653 -04:00 [DBG] Processing signout callback request
+2019-07-05 18:43:07.729 -04:00 [DBG] client configuration validation for client produce-spa succeeded.
+2019-07-05 18:43:07.733 -04:00 [DBG] No client front-channel logout URLs
+2019-07-05 18:43:07.735 -04:00 [DBG] No client back-channel logout URLs
+2019-07-05 18:43:07.736 -04:00 [INF] Successful signout callback.
+2019-07-05 18:43:07.739 -04:00 [DBG] No client front-channel iframe urls
+2019-07-05 18:43:07.740 -04:00 [DBG] No client back-channel iframe urls
+2019-07-05 18:43:18.755 -04:00 [INF] AuthenticationScheme: Identity.Application was challenged.

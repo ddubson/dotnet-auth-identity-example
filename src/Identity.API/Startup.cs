@@ -88,6 +88,7 @@ namespace Identity.API
 
             app.UseStaticFiles();
             app.UseIdentityServer();
+            app.UseHttpsRedirection();
             app.UseMvcWithDefaultRoute();
         }
     }

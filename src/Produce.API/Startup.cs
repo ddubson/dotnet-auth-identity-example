@@ -35,7 +35,7 @@ namespace ProduceAPI
                 .AddJwtBearer("Bearer", options =>
                 {
                     // set the Identity.API service as the authority on authentication/authorization
-                    options.Authority = "http://localhost:5000";
+                    options.Authority = "https://localhost:5000";
                     options.RequireHttpsMetadata = false;
 
                     // set the name of the API that's talking to the Identity API

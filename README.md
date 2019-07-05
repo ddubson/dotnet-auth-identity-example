@@ -25,6 +25,10 @@ dotnet new console --name ClientCredentialsFlow.Client --output .\src\ClientCred
 dotnet sln DotNetAuthIdentityExample.sln add src\ClientCredentialsFlow.Client
 dotnet add .\src\ClientCredentialsFlow.Client\ClientCredentialsFlow.Client.csproj package IdentityModel
 
+# Add a demonstrational React Single Page App for Implicit flow (aka SPA flow)
+dotnet new react --name Produce.SPA --output .\src\Produce.SPA
+dotnet sln DotNetAuthIdentityExample.sln add src\Produce.SPA\Produce.SPA.csproj
+dotnet add .\src\Produce.SPA\Produce.SPA.csproj package IdentityServer4.AccessTokenValidation
 ```
 
 ## Service Blueprint
@@ -32,8 +36,11 @@ dotnet add .\src\ClientCredentialsFlow.Client\ClientCredentialsFlow.Client.cspro
 | Service Name | Port | Port Type |
 | -------- | -------- | -------- |
 | Identity API | 5000     | `http`     |
+| Identity API | 5000     | `https`     |
 | Produce API | 5005     | `http`     |
 | Produce API | 5006     | `https`     |
+| React App Client | 5010     | `http`     |
+| React App Client | 5011     | `https`     |
 
 ## Authorization Flow 1: Client Credentials
 
