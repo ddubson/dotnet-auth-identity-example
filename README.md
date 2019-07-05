@@ -1,9 +1,14 @@
 # .NET Auth Identity Example
 
 ```bash
-# Create application with auth framework
-dotnet new webapp --auth Individual --output AuthApp
+dotnet new sln --name DotNetAuthIdentityExample
+dotnet new webapp --auth Individual --name Identity.API --output .\src\Identity.API
+dotnet sln DotNetAuthIdentityExample.sln add .\src\Identity.API\Identity.API.csproj
 ```
+
+## Identity service
+
+Default ports: https `5005`, http `5006`
 
 Endpoints exposed by `ASP.NET Core Identity` framework:
 
@@ -18,5 +23,5 @@ to reference is `app.db` in the root directory.
 
 ```bash
 # Run database migrations
-dotnet ef database update
+dotnet ef database update --project .\src\Identity.API
 ```
