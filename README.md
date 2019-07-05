@@ -1,14 +1,43 @@
 # .NET Auth Identity Example
 
+## Creating from scratch
+
 ```bash
 dotnet new sln --name DotNetAuthIdentityExample
-dotnet new webapp --auth Individual --name Identity.API --output .\src\Identity.API
+
+# Install IdentityServer4 templates
+dotnet new -i IdentityServer4.Templates
+
+# Create Identity service with IdentityServer4 + ASP.NET Core Identity frameworks
+dotnet new is4aspid --name Identity.API --output .\src\Identity.API
+
+# Add Identity service to solution
 dotnet sln DotNetAuthIdentityExample.sln add .\src\Identity.API\Identity.API.csproj
+
+# Create an API <-- this is the protected API guarded by the identity service
+dotnet new webapi --name ProduceAPI --output .\src\Produce.API
+
+# Add API to solution
+dotnet sln DotNetAuthIdentityExample.sln add src\Produce.API
+
+# Add a demonstrational client for Client Credentials flow
+dotnet new console --name ClientCredentialsFlow.Client --output .\src\ClientCredentialsFlow.Client
+dotnet sln DotNetAuthIdentityExample.sln add src\ClientCredentialsFlow.Client
+dotnet add .\src\ClientCredentialsFlow.Client\ClientCredentialsFlow.Client.csproj package IdentityModel
+
 ```
+
+## Service Blueprint
+
+| Service Name | Port | Port Type |
+| -------- | -------- | -------- |
+| Identity API | 5000     | `http`     |
+| Produce API | 5005     | `http`     |
+| Produce API | 5006     | `https`     |
 
 ## Identity service
 
-Default ports: https `5005`, http `5006`
+Using [IdentityServer4](http://docs.identityserver.io/en/latest/index.html) - OpenID and OAuth2 framework for ASP.NET Core
 
 Endpoints exposed by `ASP.NET Core Identity` framework:
 
