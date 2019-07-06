@@ -51,7 +51,7 @@ client id and client secret is embedded in the client as well as the auth servic
 
 Within this solution, client credential flow is used like so:
 
-Identity.API is up and running on `:5000`, 
+Identity.API is up and running on `:5000`,
 Produce API is up and running on `:5005, :5006`
 
 1. `ClientCredentialsFlow.Client` wants to access the Produce API but the resources are protected
@@ -64,6 +64,20 @@ If not provided, the resource request is rejected.
 6. `ClientCredentialsFlow.Client`, now having a Bearer token, turns to the `Produce.API` and asks for the protected
 resource again, but this time with `Authorization: Bearer [token]` in the HTTP request header.
 7. `ClientCredentialsFlow.Client` is now able to view the protected resource of the `Produce.API`
+
+## Authorization Flow 2: Code
+
+OAuth 2 Code (Implicit) flow is geared towards single page applications or other
+clients that have user navigation and authorization flow.
+
+Within this solution, the code flow is used like so:
+
+`Identity.API` is up and running on `5000`,
+`Produce.SPA` is up and running on `5010`
+
+1. `Produce.SPA` (Single Page App written in React)
+
+TBD
 
 ## Identity API service
 

@@ -41,12 +41,24 @@ namespace ProduceAPI
                     // set the name of the API that's talking to the Identity API
                     options.Audience = "ProduceAPI";
                 });
+            
+            services.AddCors(options =>
+            {
+                // this defines a CORS policy called "default"
+                options.AddPolicy("default", policy =>
+                {
+                    policy.WithOrigins("https://localhost:5010")
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             app.UseAuthentication();
+            app.UseCors("default");
             app.UseMvc();
         }
     }
