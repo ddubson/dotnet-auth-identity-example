@@ -27,6 +27,22 @@ Here is the layout of the services in this solution
 | React App Client | 5010     | `https`     |
 | React App Client | 5011     | `http`     |
 
+## Starting projects locally
+
+Get the .NET Core SDK on MacOS via: `brew cask install dotnet-sdk`
+
+Identity API: 
+
+`dotnet run --project src/Identity.API`
+
+Produce API: 
+
+`dotnet run --project src/Produce.API`
+
+Produce Single Page App (SPA): 
+
+`dotnet run --project src/Produce.SPA`
+
 ## Authorization Flow 1: Client Credentials
 
 OAuth 2 Client Credentials flow is geared mostly towards service-to-service communication, since
