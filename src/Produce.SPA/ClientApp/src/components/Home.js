@@ -13,7 +13,7 @@ export class Home extends PureComponent {
         this.state = {
             isLoggedIn: false,
             userName: null,
-            profile: []
+            produceItems: []
         }
     }
 
@@ -21,14 +21,14 @@ export class Home extends PureComponent {
         this.props.openIdManager.getUser().then((user) => {
             if (user) {
                 this.setState({isLoggedIn: true, userName: user.profile.preferred_username});
-                axios.get('/api/identity', {
+                axios.get('/api/values', {
                     baseURL: 'https://localhost:5005',
                     headers: {'Authorization': 'Bearer ' + user.access_token}
                 }).then((response) => {
-                    this.setState({profile: response.data})
+                    this.setState({produceItems: response.data})
                 }).catch(e => console.error(e))
             } else {
-                this.setState({isLoggedIn: false, userName: null});
+                this.setState({isLoggedIn: false, userName: null, produceItems: []});
             }
         });
     }
@@ -61,10 +61,12 @@ export class Home extends PureComponent {
             <React.Fragment>
                 <div>User is logged in as:</div>
                 <div>{this.state.userName}</div>
+                <hr/>
 
-                <div>My profile</div>
-                {this.state.profile.map((object) => {
-                    return <div>{object.type} -> {object.value}</div>
+                <div>(Auth Protected Resources)</div>
+                <div>My Produce Items</div>
+                {this.state.produceItems.map((produceItem) => {
+                    return <div>{produceItem}</div>
                 })}
             </React.Fragment>
         )
