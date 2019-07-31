@@ -73,19 +73,43 @@ clients that have user navigation and authorization flow.
 
 Within this solution, the code flow is used like so:
 
-`Identity.API` is up and running on `5000`,
-`Produce.API` is up and running on `5005`
-`Produce.SPA` is up and running on `5010`
+> `Identity.API` is up and running on `5000`
+>
+> `Produce.API` is up and running on `5005`
+>
+> `Produce.SPA` is up and running on `5010`
 
-1. `Produce.SPA` (Single Page App written in React) wants to access `Produce.API` endpoints, but they are protected
+- `Produce.SPA` (Single Page App written in React) wants to access `Produce.API` endpoints, but they are protected
 via the `Authorize` attribute. `Produce.API` is hooked up to `Identity.API` as its authority on who has access and 
 who does not.
-2. `Produce.SPA` needs a Bearer token to talk to `Produce.API`, and it can get it from `Identity.API`, so all it has to
+- `Identity.API` has a configuration file `Config.cs` which entails OAuth configuration for Authorization Code grant type
+
+```csharp
+authorizationCodeFlowClient = new Client
+    {
+        ClientId = "produce-spa",
+        ClientName = "Produce SPA React App",
+        RequirePkce = true,
+        RequireClientSecret = false,
+        AllowedGrantTypes = GrantTypes.Code,
+    
+        RedirectUris = {"https://localhost:5010/callback"},
+        PostLogoutRedirectUris = {"https://localhost:5010"},
+        AllowedCorsOrigins = {"https://localhost:5010"},
+    
+        AllowedScopes =
+        {
+            "ProduceAPI"
+        }
+    }
+``` 
+
+- `Produce.SPA` needs a Bearer token to talk to `Produce.API`, and it can get it from `Identity.API`, so all it has to
 do is ask for a new token (i.e. authorize). In the SPA (Single Page App), this is done via redirect to the Identity
 server for login.
-3. Once the user has logged in on the Identity Server, the user is redirected back to the original SPA, but with a token
+- Once the user has logged in on the Identity Server, the user is redirected back to the original SPA, but with a token
 in hand.
-4. The SPA will now handle the token, and is able to make requests on behalf of the user, to the `Produce.API` which
+- The SPA will now handle the token, and is able to make requests on behalf of the user, to the `Produce.API` which
 allows the user to fetch its resources.
 
 ### How the components are wired up
